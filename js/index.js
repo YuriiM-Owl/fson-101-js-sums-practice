@@ -40,5 +40,19 @@ function time(minutes) {
     console.log(modifiedMinutes)
     return `${modifiedHours}:${modifiedMinutes}`;
 }
-const userMinutes = Number(prompt("enter minutes"))
-console.log(time(userMinutes));
+
+
+// const userMinutes = Number(prompt("enter minutes"))
+// console.log(time(userMinutes));
+
+//TODO:==============================
+// Напиши функцію, яка перевіряє чи є логін в рядку
+
+const res = prompt('vvedi name')
+const str = 'Peter John Igor Sasha'
+
+function controlLogin(res) {
+    return str.includes(res);
+}
+
+console.log(controlLogin(res));
