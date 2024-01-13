@@ -40,4 +40,5 @@ function time(minutes) {
     console.log(modifiedMinutes)
     return `${modifiedHours}:${modifiedMinutes}`;
 }
-console.log(time(64));
+const userMinutes = Number(prompt("enter minutes"))
+console.log(time(userMinutes));
