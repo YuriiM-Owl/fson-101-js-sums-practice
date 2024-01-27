@@ -57,3 +57,28 @@ console.log(unique(words));
 */
 
 // ! TASK-03
+
+
+
+// Напишіть функцію makeInvetedString(), яка замінює регістр кожного символу
+//У сторіччі на протилежний
+//Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
+
+function makeInvetedString(str) {
+    let invertedString = "";
+    const arrOfStr = str.split("");
+    console.log(arrOfStr);
+    for (const element of arrOfStr) {
+        if (element === element.toUpperCase()) {
+            invertedString += element.toLowerCase();
+        }
+        else {
+            invertedString += element.toUpperCase();
+        }
+        
+    }
+    return invertedString;
+}
+console.log(makeInvetedString('Java Script'))
+
+// ! TASK- 04
