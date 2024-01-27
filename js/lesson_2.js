@@ -58,54 +58,50 @@ console.log(unique(words));
 
 // ! TASK-03
 
+// Напишіть функцію makeInvertedString(), яка замінює регістр кожного символу у рядку на протилежний
+// Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
 
-
-// Напишіть функцію makeInvetedString(), яка замінює регістр кожного символу
-//У сторіччі на протилежний
-//Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
-
-function makeInvetedString(str) {
+/*
+function makeInvertedString(str) {
     let invertedString = "";
     const arrOfStr = str.split("");
     console.log(arrOfStr);
     for (const element of arrOfStr) {
         if (element === element.toUpperCase()) {
             invertedString += element.toLowerCase();
-        }
-        else {
+        } else {
             invertedString += element.toUpperCase();
         }
-        
     }
     return invertedString;
 }
-//console.log(makeInvetedString('Java Script'))
+console.log(makeInvertedString("Java Script")); 
+*/
 
-// ! TASK- 04
+// ! TASK-04
 
-//~ TODO:========================== next
+// TODO:========================== next
 //Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
 
+/*
 function caclculateAverage(arg) {
-console.log(arguments);
-let totalCount = 0;
-let totalSum = 0;
-for (const argument of arguments) {
-    //console.log(typeof argument)
-    if ( typeof argument==="number" ) { 
-        totalCount += 1 
-        totalSum += argument
-     }
-
+    console.log(arguments);
+    let totalCount = 0;
+    let totalSum = 0;
+    for (const argument of arguments) {
+        //console.log(typeof argument)
+        if (typeof argument === "number") {
+            totalCount += 1;
+            totalSum += argument;
+        }
     }
-    
-    return totalSum / totalCount
-    console.log(totalSum)
-    console.log(totalCount)
-}
-console.log(caclculateAverage(10, 5, 12, `S`, 20))
 
-// ! TASK-04
+    // console.log(totalSum);
+    // console.log(totalCount);
+    return totalSum / totalCount;
+}
+console.log(caclculateAverage(10, 5, 12, `S`, 20));
+*/
