@@ -79,6 +79,33 @@ function makeInvetedString(str) {
     }
     return invertedString;
 }
-console.log(makeInvetedString('Java Script'))
+//console.log(makeInvetedString('Java Script'))
 
 // ! TASK- 04
+
+//~ TODO:========================== next
+//Напишіть функцію caclculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+function caclculateAverage(arg) {
+console.log(arguments);
+let totalCount = 0;
+let totalSum = 0;
+for (const argument of arguments) {
+    //console.log(typeof argument)
+    if ( typeof argument==="number" ) { 
+        totalCount += 1 
+        totalSum += argument
+     }
+
+    }
+    
+    return totalSum / totalCount
+    console.log(totalSum)
+    console.log(totalCount)
+}
+console.log(caclculateAverage(10, 5, 12, `S`, 20))
+
+// ! TASK-04
