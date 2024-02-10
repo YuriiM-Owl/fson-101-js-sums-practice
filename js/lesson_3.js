@@ -148,6 +148,17 @@ function getLengthTag(arr) {
   return arr.flatMap(item => item.tags).reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1}), {})
 }
 
-console.log(getLengthTag(tweets));
+// console.log(getLengthTag(tweets));
 
-
+//1 {'js': 1}
+//2 {'js': 1, "nodejs": 1}
+//3 {'js': 1, "nodejs": 1, html: 1}
+//4 {'js': 1, "nodejs": 1, html: 1, css: 1}
+//5 {'js': 1, "nodejs": 1, css: 1, "html": 2 }
+//6 {"nodejs": 1, css: 1, "html": 2 , js: 2 }
+//7 { css: 1, "html": 2 , js: 2, "nodejs": 2}
+//8 { "html": 2 , js: 2, "nodejs": 2, css: 2}
+//9 { "html": 2 , js: 2, "nodejs": 2, css: 2, react: 1}
+//10 { "html": 2 , "nodejs": 2, css: 2, react: 1, js: 3}
+//11 { "html": 2 , css: 2, react: 1, js: 3, nodejs: 3}
+//12{ "html": 2 , css: 2, react: 1, js: 3, nodejs: 3, react: 2}
