@@ -92,7 +92,7 @@ function getUserNames(usersData) {
   return usersData.map((user) => user.name);
 }
 
-console.log(getUserNames(users));
+// console.log(getUserNames(users));
 
 // Отримати масив імен користувачів за статтю (поле gender) за допомогою reduce
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
@@ -105,4 +105,17 @@ function getUsersWithGender(userData, gender) {
   }, []);
 }
 
-console.log(getUsersWithGender(users, "male"));
+// console.log(getUsersWithGender(users, "male"));
+
+// Отримати масив тільки неактивних користувачів (поле є активним).
+// console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
+const getInactiveUsers = (users) => {
+  return users.filter(item => {
+
+    console.log(!item.isActive);
+
+    return !item.isActive
+  });
+}
+
+console.log(getInactiveUsers(users));
