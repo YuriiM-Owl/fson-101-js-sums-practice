@@ -37,3 +37,32 @@ function changeState() {
   passwordButton.textContent = "Розкрити";
 }
 
+//  Завдання 7
+// При натисканні на коло він повинен слідувати за курсором.
+// При повторному натисканні він стає в початкове положення.
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
+// https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
+
+const circle = document.querySelector(".outerCircle");
+
+circle.addEventListener("click", addPosition);
+console.log(getComputedStyle(circle).left);
+
+function addPosition(event) {
+  if (circle.style.position !== "absolute") {
+    circle.style.position = "absolute";
+    window.addEventListener("mousemove", catchCursorPosition);
+    return;
+  }
+  circle.style.position = "unset"; 
+  // можно static
+  window.removeEventListener("mousemove", catchCursorPosition);
+  return;
+}
+ function catchCursorPosition(event) {
+    circle.style.left = (event.pageX - 20 + "px");
+    circle.style.top = (event.pageY -20 + "px");
+}
+  
+  
