@@ -112,10 +112,53 @@ function getUsersWithGender(userData, gender) {
 const getInactiveUsers = (users) => {
   return users.filter(item => {
 
-    console.log(!item.isActive);
+    // console.log(!item.isActive);
 
     return !item.isActive
   });
 }
 
-console.log(getInactiveUsers(users));
+// console.log(getInactiveUsers(users));
+
+//Призначити знижку 20% на фрукти в масиві,
+//Присвоїти ID для кожного продукту
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+function getPriceWithSale(arr) {
+  return arr.map(item => ({ ...item, id: Math.floor(Math.random() * 100000), price: item.price * 0.8 }));
+}
+// console.log(getPriceWithSale(fruits));
+
+// Повернути об'єкт у якому вказується кількість тегів
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const obj = { js: 3, html: 4, css: 2, nodejs: 6, react: 1 };
+
+function getLengthTag(arr) {
+  return arr.flatMap(item => item.tags).reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1}), {})
+}
+
+// console.log(getLengthTag(tweets));
+
+//1 {'js': 1}
+//2 {'js': 1, "nodejs": 1}
+//3 {'js': 1, "nodejs": 1, html: 1}
+//4 {'js': 1, "nodejs": 1, html: 1, css: 1}
+//5 {'js': 1, "nodejs": 1, css: 1, "html": 2 }
+//6 {"nodejs": 1, css: 1, "html": 2 , js: 2 }
+//7 { css: 1, "html": 2 , js: 2, "nodejs": 2}
+//8 { "html": 2 , js: 2, "nodejs": 2, css: 2}
+//9 { "html": 2 , js: 2, "nodejs": 2, css: 2, react: 1}
+//10 { "html": 2 , "nodejs": 2, css: 2, react: 1, js: 3}
+//11 { "html": 2 , css: 2, react: 1, js: 3, nodejs: 3}
+//12{ "html": 2 , css: 2, react: 1, js: 3, nodejs: 3, react: 2}
