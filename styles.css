@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    background-color: rgb(130, 195, 132);
+}
+
+div {
+    margin-bottom: 100px;
+}
+
+#box {
+    width: 50px;
+    height: 50px;
+    border: 2px dashed red;
+    margin: 10px;
+}
+
+.outerCircle,
+.innerCircle {
+    margin: 0;
+    border-radius: 50%;
+}
+
+.outerCircle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+
+.innerCircle {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#circleButton {
+    margin-top: 20px;
+}
+
+#place {
+    width: 100px;
+    height: 200px;
+    background-color: green;
+}
+
+.checkboxList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.taskTitle {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 22px;
+}
